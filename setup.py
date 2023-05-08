@@ -5,7 +5,7 @@ with open("app/Readme.md", "r") as f:
 
 setup(
     name="security_scanner",
-    version="0.1.0",
+    version="0.1.1",
     description="Password/passphrase strength and health checker",
     package_dir={"": "app"},
     packages=find_packages(where="app"),

@@ -1,10 +1,13 @@
-Security Scanner
-A package used to check the health of strength Password/passphrase.
+# Security Scanner
 
-How to use
+A package used to check the health and strength of passwords/passphrases.
+
+# How to use
 After installing the package use following import:
 
-from security_scanner import check_password_strength, check_uniqueness, check_membership_in_rainbow_tables, check_rotation_activated
+```Python
+from security_scanner import (check_password_strength, check_uniqueness, check_membership_in_rainbow_tables, check_rotation_activated)
+```
 
 Then use following commands:
 
