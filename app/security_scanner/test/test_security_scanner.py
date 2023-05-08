@@ -7,7 +7,7 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from security_scanner import check_password_strength, check_membership_in_rainbow_tables
+from src.security_scanner import check_password_strength, check_membership_in_rainbow_tables
 
 
 def test_check_password_strength():
