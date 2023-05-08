@@ -8,6 +8,7 @@ from security_scanner import check_password_strength, check_uniqueness, check_me
 
 Then use following commands:
 
+```Python
 password = getpass.getpass(prompt='Enter password: ')
 
 if not check_password_strength(password):
@@ -20,3 +21,4 @@ elif not check_rotation_activated(datetime.date(YEAR, MONTH, DAY), rotation_inte
     print("Screen rotation is not activated")
 else:
     print("Password is strong and unique, and screen rotation is activated")
+````
