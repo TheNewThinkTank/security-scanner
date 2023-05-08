@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: security-scanner
-Version: 0.1.1
+Version: 0.1.2
 Summary: Password/passphrase strength and health checker
 Home-page: https://github.com/TheNewThinkTank/security-scanner
 Author: TheNewThinkTank
@@ -22,7 +22,12 @@ A package used to check the health and strength of passwords/passphrases.
 After installing the package use following import:
 
 ```Python
-from security_scanner import (check_password_strength, check_uniqueness, check_membership_in_rainbow_tables, check_rotation_activated)
+from security_scanner import (
+    check_password_strength,
+    check_uniqueness,
+    check_membership_in_rainbow_tables,
+    check_rotation_activated
+    )
 ```
 
 Then use following commands:

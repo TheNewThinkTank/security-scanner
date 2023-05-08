@@ -6,7 +6,12 @@ A package used to check the health and strength of passwords/passphrases.
 After installing the package use following import:
 
 ```Python
-from security_scanner import (check_password_strength, check_uniqueness, check_membership_in_rainbow_tables, check_rotation_activated)
+from security_scanner import (
+    check_password_strength,
+    check_uniqueness,
+    check_membership_in_rainbow_tables,
+    check_rotation_activated
+    )
 ```
 
 Then use following commands:
