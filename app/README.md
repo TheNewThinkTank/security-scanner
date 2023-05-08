@@ -26,7 +26,7 @@ elif not check_uniqueness(password):
 elif not check_membership_in_rainbow_tables(password):
     print("Password is in rainbow tables")
 elif not check_rotation_activated(datetime.date(YEAR, MONTH, DAY), rotation_interval_days):
-    print("Screen rotation is not activated")
+    print("password rotation is not activated")
 else:
-    print("Password is strong and unique, and screen rotation is activated")
+    print("Password is strong and unique, and password rotation is activated")
 ````
