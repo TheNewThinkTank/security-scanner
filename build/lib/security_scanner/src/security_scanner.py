@@ -55,7 +55,7 @@ def check_uniqueness(password: str) -> bool:
     sha1_password = hashlib.sha1(password.encode("utf-8")).hexdigest().upper()
     prefix, suffix = sha1_password[:5], sha1_password[5:]
     url = f"https://api.pwnedpasswords.com/range/{prefix}"
-    response = httpx.get(url)  # requests.get(url)
+    response = httpx.get(url)
     if response.status_code == 200:
         hashes = (line.split(":") for line in response.text.splitlines())
         count = next((int(count) for suffix_hash, count in hashes if suffix_hash == suffix), 0)
@@ -116,16 +116,15 @@ def check_rotation_activated(last_rotation_date: datetime.date, rotation_interva
 
 if __name__ == "__main__":
 
-    # password = input("Enter password: ")
     password = getpass.getpass(prompt='Enter password: ')
 
     if not check_password_strength(password):
         print("Password is weak")
-    # elif not check_uniqueness(password):
-    #     print("Password is not unique")
+    elif not check_uniqueness(password):
+        print("Password is not unique")
     # elif not check_membership_in_rainbow_tables(password):
     #     print("Password is in rainbow tables")
-    # elif not check_rotation_activated(datetime.date(2023, 4, 7), 32):
-    #     print("Screen rotation is not activated")
+    elif not check_rotation_activated(datetime.date(2023, 4, 7), 32):
+        print("rotation is not activated")
     else:
         print("Password is strong and unique, and screen rotation is activated")
