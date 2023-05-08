@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: security-scanner
-Version: 0.0.1
+Version: 0.1.0
 Summary: Password/passphrase strength and health checker
 Home-page: https://github.com/TheNewThinkTank/security-scanner
 Author: TheNewThinkTank
@@ -24,6 +24,7 @@ from security_scanner import check_password_strength, check_uniqueness, check_me
 
 Then use following commands:
 
+```Python
 password = getpass.getpass(prompt='Enter password: ')
 
 if not check_password_strength(password):
@@ -36,3 +37,4 @@ elif not check_rotation_activated(datetime.date(YEAR, MONTH, DAY), rotation_inte
     print("Screen rotation is not activated")
 else:
     print("Password is strong and unique, and screen rotation is activated")
+````

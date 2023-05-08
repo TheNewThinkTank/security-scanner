@@ -4,6 +4,7 @@
 import datetime
 import getpass
 import hashlib
+import string
 import subprocess
 
 import httpx
@@ -35,8 +36,7 @@ def check_password_strength(password: str) -> bool:
         return False
 
     # Password should contain at least one special character
-    special_chars = "!@#$%^&*()_+-="
-    if not any(char in special_chars for char in password):
+    if not any(char in string.punctuation for char in password):
         return False
 
     # Password is strong
