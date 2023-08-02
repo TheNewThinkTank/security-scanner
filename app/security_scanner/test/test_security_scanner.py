@@ -1,4 +1,4 @@
-"""unittests for security_scanner
+"""unittests for security_scanner.
 """
 
 import os
