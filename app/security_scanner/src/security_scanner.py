@@ -58,7 +58,11 @@ def check_uniqueness(password: str) -> bool:
     response = httpx.get(url)
     if response.status_code == 200:
         hashes = (line.split(":") for line in response.text.splitlines())
-        count = next((int(count) for suffix_hash, count in hashes if suffix_hash == suffix), 0)
+        count = next((int(count)
+                      for suffix_hash, count in hashes
+                      if suffix_hash == suffix),
+                      0
+                      )
         if count > 0:
             return False
     
@@ -88,7 +92,9 @@ def check_membership_in_rainbow_tables(password: str) -> bool:
         return False
 
 
-def check_rotation_activated(last_rotation_date: datetime.date, rotation_interval_days: int) -> bool:
+def check_rotation_activated(last_rotation_date: datetime.date,
+                             rotation_interval_days: int
+                             ) -> bool:
     """Check if password rotation is activated.
 
     :param last_rotation_date: _description_
@@ -105,7 +111,8 @@ def check_rotation_activated(last_rotation_date: datetime.date, rotation_interva
     # Calculate the number of days since the last password rotation
     days_since_last_rotation = (current_date - last_rotation_date).days
 
-    # Check if the number of days since the last rotation is greater than the rotation interval
+    # Check if the number of days since the last rotation,
+    # is greater than the rotation interval
     if days_since_last_rotation >= rotation_interval_days:
         # Password rotation is activated
         return True
@@ -114,8 +121,7 @@ def check_rotation_activated(last_rotation_date: datetime.date, rotation_interva
         return False
 
 
-if __name__ == "__main__":
-
+def main() -> None:
     password = getpass.getpass(prompt='Enter password: ')
 
     if not check_password_strength(password):
@@ -128,3 +134,7 @@ if __name__ == "__main__":
         print("rotation is not activated")
     else:
         print("Password is strong and unique, and screen rotation is activated")
+
+
+if __name__ == "__main__":
+    main()
