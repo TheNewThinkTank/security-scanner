@@ -1,19 +1,20 @@
+
 from setuptools import find_packages, setup
 
-with open("app/Readme.md", "r") as f:
+with open("security_scanner/README.md", "r") as f:
     long_description = f.read()
 
 setup(
     name="security_scanner",
     version="0.1.4",
     description="Password/passphrase strength and health checker",
-    package_dir={"": "app"},
-    packages=find_packages(where="app"),
+    package_dir={"": "security_scanner"},
+    packages=find_packages(where="security_scanner"),
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/TheNewThinkTank/security-scanner",
     author="TheNewThinkTank",
-    author_email="gcr84@hotmail.com",
+    author_email="TheNewThinkTank@users.noreply.github.com",
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
