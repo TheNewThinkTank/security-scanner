@@ -48,7 +48,7 @@ jobs:
           restore-keys: ${{ runner.os }}-mypy-
 
       - name: Static-type-checks-with-mypy
-        run: poetry run mypy src/ --exclude site-packages
+        run: poetry run mypy security_scanner/ --exclude site-packages
 
       - name: Lint with ruff
         run: poetry run ruff check
