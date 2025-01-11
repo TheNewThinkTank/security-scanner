@@ -9,7 +9,7 @@
 ![commit activity](https://img.shields.io/github/commit-activity/m/TheNewThinkTank/security-scanner)
 ![PyPI Downloads](https://img.shields.io/pypi/dm/security-scanner)
 [![codecov](https://codecov.io/gh/TheNewThinkTank/security-scanner/graph/badge.svg?token=a2pTmNUXeV)](https://codecov.io/gh/TheNewThinkTank/security-scanner)
-![CI](https://github.com/TheNewThinkTank/security-scanner/actions/workflows/wf.yml/badge.svg)
+![CI](https://github.com/TheNewThinkTank/security-scanner/actions/workflows/qualify_code.yml/badge.svg)
 [![GitHub repo size](https://img.shields.io/github/repo-size/TheNewThinkTank/security-scanner?style=flat&logo=github&logoColor=whitesmoke&label=Repo%20Size)](https://github.com/TheNewThinkTank/security-scanner/archive/refs/heads/main.zip)
 
 # security-scanner
