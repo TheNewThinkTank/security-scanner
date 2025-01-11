@@ -2,7 +2,7 @@
 name = "security-scanner"
 version = "0.1.4"
 description = "Password/passphrase strength and health checker"
-authors = ["Gustav Rasmussen TheNewThinkTank@users.noreply.github.com"]
+authors = ["Gustav Rasmussen <TheNewThinkTank@users.noreply.github.com>"]
 license = "MIT"
 readme = "README.md"
 packages = [
