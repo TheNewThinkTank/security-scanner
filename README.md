@@ -5,7 +5,7 @@
 <img src="https://img.shields.io/github/license/TheNewThinkTank/security-scanner.svg">
 </a>
 
-[![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
+[![security: bandit](https://img.shields.io/badge/security-bandit-green.svg)](https://github.com/PyCQA/bandit)
 ![commit activity](https://img.shields.io/github/commit-activity/m/TheNewThinkTank/security-scanner)
 ![PyPI Downloads](https://img.shields.io/pypi/dm/security-scanner)
 [![codecov](https://codecov.io/gh/TheNewThinkTank/security-scanner/graph/badge.svg?token=a2pTmNUXeV)](https://codecov.io/gh/TheNewThinkTank/security-scanner)
