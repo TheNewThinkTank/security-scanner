@@ -1,15 +1,10 @@
 """unittests for security_scanner.
 """
 
-import os
-import sys
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-from src.security_scanner import (check_password_strength,
-                                  # check_membership_in_rainbow_tables
-                                  )
-
+from security_scanner.src.security_scanner import (  # type: ignore
+    check_password_strength,
+    # check_membership_in_rainbow_tables
+    )
 
 def test_check_password_strength():
 
