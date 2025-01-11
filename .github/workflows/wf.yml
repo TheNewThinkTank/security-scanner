@@ -40,7 +40,7 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
 
       - name: Lint with ruff
-        run: poetry run ruff --ignore=E402,F401 .
+        run: poetry run ruff check
 
       - name: Run Bandit
         run: bandit -r .
