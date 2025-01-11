@@ -6,14 +6,13 @@ import getpass
 import hashlib
 import string
 import subprocess
-
 import httpx
 
 
 def check_password_strength(password: str) -> bool:
     """Check password strength.
 
-    :param password: _description_
+    :param password: Password
     :type password: str
     :return: _description_
     :rtype: bool
@@ -52,8 +51,8 @@ def check_uniqueness(password: str) -> bool:
     :rtype: bool
     """
 
-    sha1_password = hashlib.sha1(password.encode("utf-8")).hexdigest().upper()
-    prefix, suffix = sha1_password[:5], sha1_password[5:]
+    sha256_password = hashlib.sha256(password.encode("utf-8")).hexdigest().upper()
+    prefix, suffix = sha256_password[:5], sha256_password[5:]
     url = f"https://api.pwnedpasswords.com/range/{prefix}"
     response = httpx.get(url)
     if response.status_code == 200:
@@ -79,11 +78,11 @@ def check_membership_in_rainbow_tables(password: str) -> bool:
     :rtype: bool
     """
 
-    # Hash password using MD5
-    md5_password = hashlib.md5(password.encode("utf-8")).hexdigest()
+    # Hash password using SHA256
+    sha256_password = hashlib.sha256(password.encode("utf-8")).hexdigest()
 
     # Search rainbow tables for hash
-    output = subprocess.check_output(["rli", "-h", "md5", md5_password]).decode("utf-8")
+    output = subprocess.check_output(["rli", "-h", "md5", sha256_password]).decode("utf-8")
     if "Not found" in output:
         # Password is not in rainbow tables
         return True
