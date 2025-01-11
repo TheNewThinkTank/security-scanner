@@ -60,7 +60,9 @@ jobs:
       #   run: safety check --full-report
 
       - name: Run-pip-audit
-        run: pip-audit
+        uses: pypa/gh-action-pip-audit@v1.0.0
+        with:
+          inputs: pyproject.toml
 
       - name: Run tests
         run: |
