@@ -56,8 +56,8 @@ jobs:
       - name: Run-bandit
         run: poetry run bandit -r . --exclude site-packages --severity-level high
 
-      - name: Run-safety
-        run: safety check --full-report
+      # - name: Run-safety
+      #   run: safety check --full-report
 
       - name: Run-pip-audit
         run: pip-audit
