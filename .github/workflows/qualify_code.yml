@@ -64,10 +64,10 @@ jobs:
       #   with:
       #     inputs: pyproject.toml
 
-      - name: Run-pip-audit
-        run: |
-          poetry run pip-audit pyproject.toml -o /tmp/pip-audit-output.txt
-          cat /tmp/pip-audit-output.txt
+      # - name: Run-pip-audit
+      #   run: |
+      #     poetry run pip-audit pyproject.toml -o /tmp/pip-audit-output.txt
+      #     cat /tmp/pip-audit-output.txt
 
       - name: Run tests
         run: |

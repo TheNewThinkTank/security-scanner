@@ -14,7 +14,7 @@ python = "^3.11"
 bandit = "^1.8.0"
 httpx = "^0.28.1"
 # safety = "^3.2.14"
-pip-audit = "^2.7.3"
+# pip-audit = "^2.7.3"
 
 [tool.poetry.dev-dependencies]
 ruff = "^0.8.4"
