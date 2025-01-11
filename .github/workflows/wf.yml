@@ -47,7 +47,7 @@ jobs:
 
       - name: Run tests
         run: |
-          poetry run pytest --rootdir=$(pwd) test/ --cov --cov-report=xml
+          poetry run pytest --rootdir=$(pwd) security_scanner/test/ --cov --cov-report=xml
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
