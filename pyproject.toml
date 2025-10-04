@@ -18,7 +18,7 @@ httpx = "^0.28.1"
 
 [tool.poetry.dev-dependencies]
 ruff = "^0.12.11"
-mypy = "^1.17.1"
+mypy = "^1.18.2"
 pytest = "^8.4.2"
 pytest-cov = "^7.0.0"
 # sphinx = "^7.1.1"
