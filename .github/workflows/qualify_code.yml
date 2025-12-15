@@ -25,7 +25,7 @@ jobs:
           python-version: ${{ env.PYTHONVERSION }}
 
       - name: Cache-mypy-dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.cache/mypy
           key: ${{ runner.os }}-mypy-${{ hashFiles('**/mypy.ini') }}
