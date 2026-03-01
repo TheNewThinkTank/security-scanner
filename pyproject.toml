@@ -17,7 +17,7 @@ httpx = "^0.28.1"
 # pip-audit = "^2.7.3"
 
 [tool.poetry.dev-dependencies]
-ruff = "^0.14.7"
+ruff = "^0.15.4"
 mypy = "^1.19.0"
 pytest = "^9.0.1"
 pytest-cov = "^7.0.0"
